@@ -1,0 +1,10 @@
+{
+  "name": "LargerScreenshots",
+  "version": "0.1.2",
+  "factorio_version": "0.16",
+  "title": "Larger screenshots",
+  "author": "aaargha",
+  "contact": "Shoot me a message on the forums/reddit",
+  "homepage": "https://forums.factorio.com/viewtopic.php?f=96&t=43360",
+  "description": "Adds an interface to take larger screenhots. It is done by creating multiple pictures."
+}

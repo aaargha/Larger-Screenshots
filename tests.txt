@@ -1,0 +1,22 @@
+/c remote.call("LargerScreenshots","screenshot", {player=…, by_player=…, position=…, size=…, zoom=…, path_prefix=…, show_gui=…, show_entity_info=…, anti_alias=…})
+
+--test default
+/c remote.call("LargerScreenshots","screenshot", {})
+
+--test zoom
+/c remote.call("LargerScreenshots","screenshot", {zoom = 2})
+
+--test pos
+/c remote.call("LargerScreenshots","screenshot", {position={10,10}})
+
+--test size
+/c remote.call("LargerScreenshots","screenshot", {size={512,512}})
+
+--test path
+/c remote.call("LargerScreenshots","screenshot", {path_prefix="herpderp"})
+
+--test aa
+/c remote.call("LargerScreenshots","screenshot", {size={15,15}, anti_alias=true})
+
+--test surface
+/c remote.call("LargerScreenshots","screenshot", {surface=1, position={10,10}})
