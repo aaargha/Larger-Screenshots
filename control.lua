@@ -7,9 +7,9 @@ local function _large_screenshot(_player, _by_player, _surface, _position, _size
 	
 	local pix_per_tile = 32 * _zoom
 
-	local max_dist = settings.get_player_settings(_player)["LargerScreenshots_max_res"] / pix_per_tile --512 is hard upper limit
+	local max_dist = settings.get_player_settings(_player)["LargerScreenshots_max_res"].value / pix_per_tile --512 is hard upper limit
 	if _anti_alias then
-		max_dist = settings.get_player_settings(_player)["LargerScreenshots_max_res_aa"] / pix_per_tile --256 is hard upper limit
+		max_dist = settings.get_player_settings(_player)["LargerScreenshots_max_res_aa"].value / pix_per_tile --256 is hard upper limit
 	end
 	
 	local width = _size.x or _size[1]
@@ -151,9 +151,9 @@ end
 	Warning: Taking large screenshots will cause RAM usage to spike heavily: a 1024x1024 tiles shot at zoom 1 peaked at about 5GB of additional ram usage while processing
 
 	To call from a mod:
-	remote.call("LargerScreenshots","screenshot", {player=…, by_player=…, surface=…, position=…, size=…, zoom=…, path_prefix=…, show_gui=…, show_entity_info=…, anti_alias=…})
+	remote.call("LargerScreenshots","screenshot", {player=â€¦, by_player=â€¦, surface=â€¦, position=â€¦, size=â€¦, zoom=â€¦, path_prefix=â€¦, show_gui=â€¦, show_entity_info=â€¦, anti_alias=â€¦})
 	To call from console as a player:
-	/c remote.call("LargerScreenshots","screenshot", {player=…, by_player=…, surface=…, position=…, size=…, zoom=…, path_prefix=…, show_gui=…, show_entity_info=…, anti_alias=…})
+	/c remote.call("LargerScreenshots","screenshot", {player=â€¦, by_player=â€¦, surface=â€¦, position=â€¦, size=â€¦, zoom=â€¦, path_prefix=â€¦, show_gui=â€¦, show_entity_info=â€¦, anti_alias=â€¦})
 
 	If called from the console only the person typing will get the screenshot, this is to prevent filling other players haddrives.
 
