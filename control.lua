@@ -111,8 +111,8 @@ local function large_screenshot(args)
 		end
 
 		game.take_screenshot{
-			player = args.player, 
-			by_player = game.player or args.by_player,
+			player = args.player or _player, 
+			by_player = args.by_player or _player,
 			surface = args.surface,  
 			position = _position, 
 			zoom = args.zoom, 
@@ -130,8 +130,8 @@ local function large_screenshot(args)
 
 	--call worker with usable arguments
 	_large_screenshot(
-		args.player, --player
-		game.player or args.by_player, --by_player
+		args.player or _player, --player
+		args.by_player or _player, --by_player
 		args.surface, --surface
 		_position, --position
 		args.size, --size
